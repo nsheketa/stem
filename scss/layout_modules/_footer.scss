@@ -1,0 +1,48 @@
+.footer{
+  padding: 15px 0;
+  background-color: #939598;
+  color: #fff;
+  @include font-size(15);
+
+  &.footer__fixed{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 49;
+  }
+
+  .container{
+    @include respond(480){
+      @include flex-wrap();
+
+    }
+    @include respond(350){
+      padding: 0 0 0 5px;
+
+    }
+  }
+}
+
+.footer__right{
+  margin-bottom: 0;
+  font-family: $Avenir;
+  @include font-size(14);
+}
+
+.footer__left{
+  display: block;
+  margin-left: auto;
+  color: #fff;
+  text-decoration: underline;
+
+  &:hover, &:focus, &:active{
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  @include respond(480){
+    width: 100%;
+    max-width: 100%;
+  }
+}

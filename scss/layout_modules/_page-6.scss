@@ -1,0 +1,367 @@
+.page__section-communication {
+  min-height: 800px;
+  @include respond(1024) {
+    .share__icons-wrap{
+      position: relative;
+      bottom: auto;
+      margin-top: 30px;
+    }
+  }
+  @include respond(570) {
+    min-height: 600px;
+  }
+}
+
+.related-info.communication {
+  position: relative;
+  bottom: auto;
+  left: 34.5%;
+  //margin-top: 30px;
+  margin-top: 17px;
+
+  @include respond(1500){
+    left: 30.5%;
+  }
+
+  @include respond(1024){
+    left: auto;
+    @include center();
+  }
+}
+
+.communication-svg__wrap {
+  //width: 600px;
+  width: 75vh;
+  position: relative;
+  right: 0;
+  left: 0;
+  margin: auto;
+  .page__bg-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include respond(1024){
+    //width: 500px;
+    width: 61vh;
+    margin-top: 65px;
+  }
+  @include respond(570){
+    //width: 350px;
+    width: 46vh;
+    //margin-top: 20px;
+    margin-top: 23%;
+  }
+  @include respond(360){
+    width: 300px;
+    margin-top: 20px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .communication-svg__wrap{
+    height: 55%;
+  }
+}
+
+.communication-svg__group-overlay{
+  position: absolute;
+  width: 20%;
+  height: 22%;
+  z-index: 2;
+}
+
+.communication-svg__group-overlay-01{
+  left: 26%;
+  top: 9%;
+}
+.communication-svg__group-overlay-02{
+  right: 25%;
+  top: 9%;
+}
+.communication-svg__group-overlay-03{
+  left: 26%;
+  top: 38%;
+}
+.communication-svg__group-overlay-04{
+  right: 25%;
+  top: 37%;
+}
+
+.communication-svg__link{
+  cursor: pointer;
+}
+.communication-svg__text{
+  font-family: $Notosans;
+  font-weight: 500;
+  fill: $textColor;
+  cursor: pointer;
+
+  text{
+    @include transition(0.3s all ease);
+  }
+
+  &:hover, &:focus, &:active{
+    text{
+      fill: #fff;
+    }
+  }
+}
+
+.communication-info__projects{
+  left: 26%;
+  bottom: 8%;
+  .related__projects-item{
+    padding: 23px 12px;
+  }
+  @include respond(1024){
+    left: auto;
+  }
+}
+
+.communication-modal__item{
+  .modal__header{
+    background-color: $orangeColor;
+    p{
+      margin-top: 1rem;
+      font-weight: 900;
+    }
+  }
+}
+
+/*--------modal-01---------*/
+.communication-modal__item-01{
+  .modal__header{
+    -webkit-background-size: 150px;
+    background-size: 150px;
+    background-position: 67% bottom;
+    background-repeat: no-repeat;
+    padding-right: 50%;
+  }
+  .modal__content{
+    background-color: #fff;
+    p{
+      color: $greyColor;
+    }
+    .modal__content-item-01{
+      padding-bottom: 0px;
+    }
+    .modal__content-item-02{
+      padding-top: 55px;
+      padding-bottom: 0px;
+    }
+    .modal__content-item-03{
+      padding-bottom: 60px;
+    }
+    .modal__content-item-04{
+      padding-bottom: 60px;
+    }
+  }
+
+  @include respond(1024){
+    .modal__content{
+      .modal__content-item-03{
+        padding-bottom: 40px;
+      }
+      .modal__content-item-04{
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  @include respond(768){
+    .modal__header{
+      background-position: 80% bottom;
+    }
+    .modal__content{
+      .modal__content-item-01{
+        padding-bottom: 10px;
+      }
+      .modal__content-item-02{
+        padding-top: 0;
+        padding-bottom: 10px;
+      }
+      .modal__content-item-03{
+        padding-top: 0;
+        padding-bottom: 10px;
+      }
+      .modal__content-item-04{
+        padding-top: 0;
+        padding-bottom: 20px;
+      }
+    }
+  }
+  @include respond(570){
+    .modal__header{
+      background-position: 95% bottom;
+    }
+  }
+}
+
+/*--------modal-02---------*/
+.communication-modal__item-02{
+  .modal__content{
+    background-color: #fff;
+    p{
+      color: $greyColor;
+    }
+    .modal__content-img{
+      text-align: center;
+      img{
+        height: 150px;
+      }
+    }
+    .modal__content-item-01{
+
+    }
+    .modal__content-item-02{
+      padding: 30px 10px;
+      ul{
+        padding-top: 20px;
+      }
+    }
+    .modal__content-item-03{
+      background-color: #bcbec0;
+      padding-bottom: 0;
+      .modal__content-img{
+        margin-top: 1rem;
+      }
+    }
+    .modal__content-item-04{
+      background-color: #bcbec0;
+      height: 100%;
+      p{
+        color: #fff;
+      }
+    }
+  }
+
+  @include respond(1024){
+    .modal__content{
+      .modal__content-item-03{
+
+      }
+      .modal__content-item-04{
+
+      }
+    }
+  }
+
+  @include respond(768){
+    .modal__content{
+      .modal__content-item-01{
+        padding-bottom: 0;
+      }
+      .modal__content-item-02{
+        padding: 0px 20px 20px;
+        ul{
+          padding-top: 0;
+        }
+        .modal__content-img{
+          margin: 1rem auto 0;
+        }
+      }
+      .modal__content-item-03{
+        padding-top: 0;
+        .modal__content-img{
+          margin: 0 auto;
+        }
+      }
+      .modal__content-item-04{
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+/*--------modal-03---------*/
+.communication-modal__item-03{
+  .modal__content{
+    background-color: #fff;
+    p{
+      color: $greyColor;
+    }
+
+    .modal__content-item-01{
+
+    }
+    .modal__content-item-02{
+
+    }
+  }
+
+  @include respond(768){
+    .modal__content{
+      .modal__content-item-02{
+        .modal__content-img{
+          width: 40%;
+          @include center();
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  @include respond(570){
+    .modal__content{
+      .modal__content-item-02{
+        .modal__content-img{
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+/*--------modal-04---------*/
+.communication-modal__item-04{
+  .modal__content{
+    background-color: #fff;
+    p{
+      color: $greyColor;
+    }
+  }
+
+  @include respond(768){
+    .modal__content{
+      .modal__content-item-02{
+        .modal__content-img{
+          width: 40%;
+          @include center();
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  @include respond(570){
+    .modal__content{
+      .modal__content-item-02{
+        .modal__content-img{
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+.related-info__accordion.communication{
+  background-color: #4fba74;
+  .modal__content{
+    max-height: 600px;
+    padding: 0 20px 70px;
+  }
+  .modal__section{
+    height: 500px;
+    overflow: auto;
+  }
+
+  @include respond(1024){
+    .modal__content{
+      max-height: none;
+      padding: 0 20px 80px;
+    }
+    .modal__section{
+      height: auto;
+      overflow: visible;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.page__section-wisdom {
+  overflow-x: hidden;
+  position: relative;
+
+  .share__icons-wrap{
+    @include respond(570){
+      bottom: 18%;
+    }
+  }
+}
+
+.wisdom__bg-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wisdom__bubble-wrap {
+
+  &.page__bubble {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .page__bubble-01 {
+    left: 25%;
+  }
+  .page__bubble-02 {
+    left: 39.5%;
+    margin-top: -20px;
+  }
+  .page__bubble-03 {
+    left: 56.5%;
+    margin-top: 10px;
+  }
+  .page__bubble-04 {
+    left: 76%;
+  }
+
+  @include respond(1200){
+    .page__bubble-01 {
+      left: 22%;
+    }
+    .page__bubble-03 {
+      left: 56.5%;
+      margin-top: 10px;
+    }
+    .page__bubble-04 {
+      left: 80%;
+    }
+  }
+  @include respond(1024){
+    .page__bubble-01 {
+      left: 30%;
+      top: 36%!important;
+    }
+    .page__bubble-02 {
+      left: 60%;
+      top: 50% !important;
+    }
+    .page__bubble-03 {
+      left: 30%;
+      top: 44% !important;
+      margin-top: 10px;
+      &:after{
+        @include rotate(90deg);
+        left: 100%;
+        bottom: 50%;
+      }
+    }
+    .page__bubble-04 {
+      left: 60%;
+      top: 40% !important;
+    }
+  }
+  @include respond(570){
+    .page__bubble-01 {
+      left: 20%;
+      top: 30%!important;
+    }
+    .page__bubble-02 {
+      left: 55%;
+      top: 47% !important;
+    }
+    .page__bubble-03 {
+      left: 20%;
+      top: 38% !important;
+    }
+    .page__bubble-04 {
+      left: 55%;
+      top: 35% !important;
+    }
+  }
+}
+
+/*--------wisdom page modals----*/
+
+.wisdom-modal__item {
+  width: 800px;
+  .modal__inner {
+
+  }
+  .modal__header {
+    background-color: $orangeColor;
+    padding: 40px;
+    color: #fff;
+    h3 {
+      margin-bottom: 0rem;
+    }
+    h4{
+      margin-bottom: 0;
+      margin-top: 1rem;
+    }
+  }
+  .modal__content {
+    padding: 40px 25px;
+    color: $greyColor;
+    background-color: #fff;
+    p {
+      color: $greyColor;
+    }
+  }
+  .modal__close{
+    .icon{
+      stroke: #fff;
+    }
+  }
+
+  @include respond(1024){
+    width: 100%;
+    border-bottom: 1px solid $orangeColor;
+    .modal__header{
+      padding: 20px;
+    }
+    .modal__content{
+      padding: 20px 5px;
+    }
+  }
+}
+
+
+

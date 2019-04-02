@@ -1,0 +1,42 @@
+@import "../modules/bootstrap/scss/bootstrap-grid";
+@import "../modules/bootstrap/scss/variables";
+//$grid-breakpoints: (
+//        xs: 0,
+//        sm: 576px,
+//        md: 768px,
+//        lg: 1024px,
+//        xl: 1200px
+//);
+
+@import "../modules/bootstrap/scss/bootstrap";
+@import "../slick/slick";
+
+@import "custom-variables";
+
+@import "fonts";
+
+@import "mixins";
+@import "custom-reset";
+@import "layout_modules/general-layout-styles";
+@import "layout_modules/text-styles";
+@import "layout_modules/animations";
+@import "layout_modules/header";
+@import "layout_modules/footer";
+@import "layout_modules/modal";
+@import "layout_modules/related-info-block";
+@import "layout_modules/homepage";
+@import "layout_modules/page-1";
+@import "layout_modules/page-2";
+@import "layout_modules/page-3";
+@import "layout_modules/page-4";
+@import "layout_modules/page-5";
+@import "layout_modules/page-6";
+@import "layout_modules/page-7";
+@import "layout_modules/page-8";
+@import "layout_modules/page-9";
+@import "layout_modules/page-10";
+@import "layout_modules/page-11";
+
+
+
+

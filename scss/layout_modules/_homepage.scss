@@ -1,0 +1,2991 @@
+.animal__svg-wrap {
+
+  .svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.page__row {
+  width: 100%;
+  //height: 100vh;
+  height: 85vh;
+  min-height: 700px;
+
+  @include respond(1350){
+    height: 700px;
+    min-height: 700px;
+  }
+
+  @include respond(1024) {
+    height: 600px;
+    min-height: 600px;
+  }
+}
+
+@media screen and (min-width: 1900px){
+  .page__row{
+    height: 85vh;
+  }
+}
+
+.page__row-content {
+
+}
+
+.homepage__row-heading {
+  @include display-flex();
+  @include ai-flex-center();
+  position: absolute;
+  top: 65px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  h2 {
+    font-weight: 900;
+    @include font-size(36);
+    line-height: 1.3;
+  }
+  @include respond(1024) {
+    padding: 0 15px;
+    white-space: nowrap;
+    top: 25px;
+    h2 {
+      @include font-size(26);
+    }
+  }
+}
+
+.next-page__link {
+  display: block;
+  margin-left: auto;
+  z-index: 10;
+  .icon {
+    color: transparent;
+    width: 65px;
+    height: 40px;
+  }
+
+  &:hover, &:focus, &:active {
+    .icon {
+      @include animation(move-on-hover, 0.7);
+      @include animation-timing-function(cubic-bezier(.39, .6, .71, .94));
+    }
+  }
+
+  @include respond(1024) {
+    .icon {
+      width: 40px;
+      height: 25px;
+    }
+  }
+}
+
+.homepage-section {
+  position: relative;
+  //height: 570px;
+  height: 700px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  .container {
+    height: 100%;
+    position: relative;
+  }
+
+  @include respond(1350){
+    height: 650px;
+  }
+
+  @include respond(1024) {
+    height: 500px;
+  }
+}
+
+.home-talking__bubble {
+  color: $textColor;
+  @include font-size(22);
+  @include transition(0.3s all ease-in-out);
+  &:after {
+    @include slideTransition();
+  }
+
+  &:hover, &:focus, &:active {
+    color: #fff;
+    background-color: $textColor;
+    &:after {
+      border-color: transparent $textColor transparent transparent;
+    }
+  }
+
+  @include respond(1024) {
+    @include font-size(18);
+  }
+}
+
+.page__row-intro {
+  background-color: #cfdf65;
+
+  @include respond(1024) {
+    height: 66vh;
+  }
+}
+
+.intro__content {
+  position: relative;
+  height: 75%;
+  .container {
+    height: 100%;
+  }
+}
+
+.animals__wrap {
+  @include display-flex();
+  @include jc-flex-end();
+  @include ai-flex-end();
+  height: 100%;
+
+  @include respond(1024) {
+    //padding-bottom: 9%;
+    @include jc-flex-center();
+  }
+}
+
+.animal__item {
+  position: relative;
+
+  .tail{
+    path, polygon, rect{
+      //stroke: #0a0a0a;
+      stroke: #151715;
+    }
+  }
+  .hand {
+    @include animation-fill-mode(both);
+  }
+  &:hover, &:focus, &:active {
+    .animal__info {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+      @include translateY(0);
+    }
+    .animal__img {
+      img {
+        &.is-static {
+          display: none;
+        }
+        &.is-moving {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.animal__bro {
+
+  .animal__img {
+    //width: 15vw;
+    width: 11vw;
+  }
+  .animal__info {
+    left: -10px;
+  }
+  .hand {
+    @include transform-origin(202px 147px);
+  }
+  &:hover, &:focus, &:active {
+    .hand {
+      @include animation(wave-small-reverse, 2, 0, 1);
+    }
+  }
+  @include respond(1350){ //new
+    .animal__img{
+      width: 15vw;
+    }
+  }
+
+  @include respond(1024) {
+    left: 20px;
+    .animal__img {
+      //width: 19vw;
+    }
+  }
+  @include respond(570) {
+    left: 38%;
+    //bottom: -35px;
+    z-index: 1;
+    .animal__img {
+      //width: 32vw;
+      width: 28vw;
+    }
+  }
+  @include respond(480) {
+    .animal__info {
+
+      top: -25px;
+    }
+  }
+}
+
+.animal__mum {
+  margin-left: 20px;
+  .animal__img {
+    //width: 17vw;
+    width: 12vw;
+  }
+  .animal__info {
+    left: -10px;
+  }
+  .hand {
+    @include transform-origin(160px 172px);
+  }
+  &:hover, &:focus, &:active {
+    .hand {
+      @include animation(wave-reverse, 2.5, 0, 1);
+    }
+  }
+  @include respond(1350){ //new
+    .animal__img{
+      width: 17vw;
+    }
+  }
+  @include respond(1024) {
+    margin-left: 0;
+    .animal__img {
+      //width: 20vw;
+    }
+  }
+  @include respond(570) {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    margin-top: -80px;
+    z-index: 0;
+    .animal__img {
+      //width: 32vw;
+      width: 29vw;
+    }
+  }
+
+  @include respond(480) {
+    .animal__info {
+      left: -21px;
+      top: 0;
+    }
+  }
+}
+
+.animal__dad {
+  margin-left: -20px;
+  .animal__img {
+    //width: 20vw;
+    width: 16vw;
+  }
+  .animal__info {
+    right: -30px;
+    top: 0;
+  }
+  .hand {
+    @include transform-origin(301px 189px);
+  }
+  &:hover, &:focus, &:active {
+    .hand {
+      @include animation(wave, 2.5, 0, 1);
+    }
+  }
+  @include respond(1350){ //new
+    .animal__img{
+      width: 22vw;
+    }
+  }
+  @include respond(1024) {
+    margin-left: 0;
+    .animal__img {
+      //width: 25vw;
+    }
+  }
+  @include respond(570) {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    margin-top: -80px;
+    .animal__img {
+      //width: 38vw;
+      width: 35vw;
+    }
+  }
+}
+
+.animal__sis {
+  margin-right: -20px;
+  margin-left: 25px;
+  .animal__img {
+    //width: 15vw;
+    width: 12.5vw;
+  }
+  .animal__info {
+    top: -20px;
+    right: 10px;
+  }
+  .hand {
+    @include transform-origin(52px 212px);
+  }
+  &:hover, &:focus, &:active {
+    .hand {
+      @include animation(wave-middle, 2, 0, 1);
+    }
+  }
+  @include respond(1350){ //new
+    .animal__img{
+      width: 15vw;
+    }
+  }
+  @include respond(1024) {
+    margin-right: 0;
+    .animal__img {
+      //width: 20vw;
+    }
+  }
+  @include respond(570) {
+    margin-right: 0;
+    margin-left: 0;
+    right: 35%;
+    //bottom: -40px;
+    .animal__img {
+      //width: 32vw;
+      width: 29vw;
+    }
+  }
+  @include respond(480) {
+    .animal__info {
+      top: -25px;
+    }
+  }
+}
+
+.animal__img {
+  img {
+    width: 100%;
+    &.is-moving {
+      display: none;
+    }
+    &.is-static {
+      display: block;
+    }
+  }
+}
+
+.animal__info {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  background-color: #3c628e;
+  color: #fff;
+  padding: 2px;
+  line-height: 1;
+  text-align: center;
+  @include slideTransition();
+  z-index: -1;
+  &.animal__info-left {
+    @include translateY(20px);
+  }
+  &.animal__info-right {
+    @include translateY(20px);
+  }
+
+  &:hover, &:active, &:focus {
+    color: #fff;
+  }
+}
+
+.animal__info-wrap {
+
+}
+
+/*------City Section------*/
+
+.section-city {
+  position: relative;
+  background-color: #e1f2fc;
+  padding-top: 20px;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include size(100%, 100px);
+    background-color: #acd9f4;
+  }
+
+  .homepage__row-heading {
+    top: 0;
+  }
+
+  .next-page__link {
+    margin-left: 0;
+    .icon {
+      stroke: $textColor;
+    }
+    &:hover, &:focus, &:active {
+      .icon {
+        stroke: #fff;
+      }
+    }
+  }
+
+  @include respond(1024) {
+    //height: auto;
+    &:after {
+      height: 50px;
+    }
+  }
+
+}
+
+.section-city__sky {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 65%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include size(100%, 280px);
+
+  @include respond(1024) {
+    height: 230px;
+  }
+  @include respond(768) {
+    height: 180px;
+  }
+}
+
+.section-city__inner {
+  position: relative;
+  height: 100%;
+  @include display-flex();
+  //@include flex-direction-col();
+  @include flex-wrap();
+
+  .container {
+    height: auto;
+  }
+}
+
+.city__satellite-wrap {
+  position: relative;
+  margin-right: 100px;
+  margin-left: auto;
+  &:hover, &:focus, &:active {
+    .city__satelite-info {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+      @include translateY(0);
+    }
+  }
+
+  @include respond(768) {
+    margin-right: 20px;
+  }
+}
+
+.city-inner__item {
+  position: absolute;
+  width: 60px;
+  top: 35%;
+  @include animation-name(sky-move);
+  @include animation-iteration-count(infinite);
+
+  @include respond(768) {
+    width: 40px;
+  }
+  &.cloud-01 {
+    left: 22%;
+    @include animation-duration(25s);
+    @include animation-delay(-15s);
+
+    @include respond(1300) {
+      left: 12%;
+    }
+    @include respond(570) {
+      left: 4%;
+    }
+  }
+  &.cloud-02 {
+    left: 30%;
+    top: 43%;
+    @include animation-duration(20s);
+    @include animation-delay(0s);
+    @include respond(1300) {
+      left: 23%;
+    }
+  }
+  &.cloud-03 {
+    left: 44%;
+    @include animation-duration(15s);
+    @include animation-delay(2s);
+    @include respond(1300) {
+      left: 41%;
+    }
+  }
+  &.cloud-04 {
+    left: 55%;
+    top: 44%;
+    width: 80px;
+    @include animation-duration(18s);
+    @include animation-delay(-4s);
+
+    @include respond(768) {
+      width: 50px;
+    }
+  }
+  &.cloud-05 {
+    right: 38%;
+    width: 40px;
+    @include animation-duration(25s);
+    @include animation-delay(-4s);
+    @include respond(1300) {
+      right: 34%;
+    }
+    @include respond(768) {
+      width: 30px;
+    }
+    @include respond(570) {
+      right: 19%;
+    }
+  }
+  &.cloud-06 {
+    right: 30%;
+    @include animation-duration(20s);
+    @include animation-delay(1s);
+    @include respond(1300) {
+      right: 21%;
+    }
+    @include respond(570) {
+      right: 5%;
+    }
+  }
+}
+
+.city__satellite {
+  @include animation(satellite-flight, 25, 0, infinite);
+  @include animation-timing-function(ease-in-out);
+  img {
+    width: 220px;
+
+    @include respond(1024) {
+      width: 170px;
+    }
+    @include respond(768) {
+      width: 100px;
+    }
+  }
+}
+
+.city__satelite-info {
+  width: 296px;
+  position: absolute;
+  left: -340px;
+  top: 12px;
+  background-color: #fff;
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -2;
+  @include slideTransition();
+  @include translateY(20px);
+  padding: 3px;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 20px 0px 0px;
+    border-color: transparent #ffffff transparent transparent;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    @include rotate(180deg);
+  }
+
+  @include respond(1024) {
+    width: 240px;
+  }
+
+  @include respond(768) {
+    right: 53%;
+    top: 160%;
+    left: auto;
+  }
+
+  @include respond(400) {
+    left: -199%;
+    top: 200%;
+    width: 246px;
+  }
+}
+
+.city-inner__img-wrap {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin-top: auto;
+  @include center();
+  max-width: 1280px;
+  z-index: 1;
+
+  @include respond(1300) {
+    max-width: 1140px;
+  }
+  @include respond(1200) {
+    max-width: 960px;
+  }
+}
+
+.city-inner__img {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+
+  @include respond(1024) {
+    margin-top: 200px;
+  }
+  @include respond(570) {
+    img {
+      width: 170%;
+      max-width: 200%;
+      margin-left: -23%;
+    }
+  }
+}
+
+/*--------Section Building--------*/
+.section-building {
+  background-color: #28a9ac;
+  //height: auto;
+  padding: 50px 0;
+  overflow-y: hidden;
+  .homepage__row-heading {
+    top: 20px;
+    position: relative;
+  }
+  h2 {
+    color: #fff;
+  }
+  .next-page__link {
+    .icon {
+      stroke: #fff;
+    }
+
+    &:hover, &:active, &:focus {
+      .icon {
+        stroke: $textColor;
+      }
+    }
+  }
+  .container {
+    height: auto;
+  }
+  @include respond(1450) {
+    padding: 50px 0;
+  }
+  @include respond(1024) {
+    .homepage__row-heading {
+      top: auto;
+      margin-top: -20px;
+    }
+  }
+}
+
+.building__scene {
+  height: 84%;
+  //height: 720px;
+  margin-top: 20px;
+  @include slideTransition();
+  &.is-hidden {
+    display: none;
+  }
+  &.is-visible {
+    display: block;
+  }
+  &.is-animated {
+    //@include animation(scene-destroy, 1, 0);
+    //@include transform-scale(0,1);
+
+    -webkit-transform: rotateX(90deg) skewX(90deg);
+    transform: rotateX(90deg) skewX(90deg);
+  }
+  .container {
+    height: auto;
+  }
+
+  @include respond(1450) {
+    //height: 600px;
+  }
+  @include respond(1024) {
+    //height: 500px;
+    height: 100%;
+    margin-top: 0;
+  }
+  @include respond(768) {
+    //height: 400px;
+  }
+  @include respond(570) {
+    //height: 300px;
+  }
+}
+
+.scene__inner {
+  position: relative;
+  height: 100%;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include animation-fill-mode(forwards);
+
+  .scene__svg {
+    width: 100%;
+  }
+  .scene__item {
+    @include slideTransition();
+
+    //-webkit-transform: rotateX(90deg) skewX(-40deg);
+    //transform: rotateX(90deg) skewX(-40deg);
+
+    //-webkit-transform: rotateX(90deg);
+    //transform: rotateX(90deg);
+
+    opacity: 0;
+
+    &.is-animated {
+      @include animation-fill-mode(forwards);
+    }
+    &.not-animated {
+      @include animation-fill-mode(backwards);
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and(min-width: 1600px) {
+  .scene__inner {
+    .scene__svg {
+      height: 130%;
+    }
+  }
+}
+
+.scene__svg-wrap {
+  height: 100%;
+  width: 95%;
+  @include center();
+  @include display-flex();
+  @include ai-flex-center();
+  @include jc-flex-center();
+  @include respond(570) {
+    width: 160%;
+    left: -40%;
+    position: relative;
+  }
+}
+
+.building__scene-01 {
+  &.is-hidden {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.is-removed {
+    display: none;
+  }
+}
+
+.scene-01__inner {
+  .scene__item {
+    &.tree-01 {
+      @include transform-origin(400px 470px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.5);
+        @include animation(scene-build, 0, 0.6);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.5);
+        @include animation(scene-destroy, 0, 0.6);
+      }
+    }
+    &.tree-02 {
+      @include transform-origin(400px 336px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.6);
+        @include animation(scene-build, 0, 0.5);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.6);
+        @include animation(scene-destroy, 0, 0.5);
+      }
+    }
+    &.tree-03 {
+      @include transform-origin(100px 773px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.7);
+        @include animation(scene-build, 0, 0.8);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.7);
+        @include animation(scene-destroy, 0, 0.8);
+      }
+    }
+    &.house {
+      @include transform-origin(202px 579px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.9);
+        @include animation(scene-build, 0, 0.45);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.9);
+        @include animation(scene-destroy, 0, 0.45);
+      }
+    }
+    &.animal-01 {
+      @include transform-origin(100px 701px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.3);
+        @include animation(scene-build, 0, 0.70);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0.70);
+      }
+    }
+    &.animal-02 {
+      @include transform-origin(413px 332px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.3);
+        @include animation(scene-build, 0, 0.60);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0.60);
+      }
+    }
+    &.animal-03 {
+      @include transform-origin(100px 600px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.3);
+        @include animation(scene-build, 0, 0.40);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0.40);
+      }
+    }
+    &.fire {
+      @include transform-origin(1382px 267px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.3);
+        @include animation(scene-build, 0, 0.8);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0.8);
+      }
+    }
+  }
+}
+
+.building__scene-02 {
+  .scene__svg-wrap {
+    .scene__svg {
+      width: 80%;
+      height: 80%;
+    }
+  }
+}
+
+.scene-02__inner {
+  .scene__item {
+    &.fence {
+      @include transform-origin(341px 142px);
+      &.fence__bottom {
+        @include transform-origin(217px 219px);
+      }
+      &.is-animated {
+        //@include animation(scene-build, 0.4, 0.5);
+        @include animation(scene-build, 0, 0.60);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.4, 0.3);
+        @include animation(scene-destroy, 0, 0.60);
+      }
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    &.tree-01 {
+      @include transform-origin(100px 100px);
+      &.is-animated {
+        //@include animation(scene-build, 0.4, 0.5);
+        @include animation(scene-build, 0, 0.60);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.5);
+        @include animation(scene-destroy, 0, 0.60);
+      }
+    }
+    &.tree-02 {
+      @include transform-origin(200px 280px);
+      &.is-animated {
+        //@include animation(scene-build, 0.4, 0.3);
+        @include animation(scene-build, 0, 0.3);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0.3);
+      }
+    }
+    &.house-01 {
+      @include transform-origin(179px 123px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.1);
+        @include animation(scene-build, 0, 0.50);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.6);
+        @include animation(scene-destroy, 0, 0.50);
+      }
+    }
+    &.house-02 {
+      @include transform-origin(179px 123px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.1);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.55);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.house-03 {
+      @include transform-origin(179px 123px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.7);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.65);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.house-04 {
+      @include transform-origin(179px 123px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.7);
+        @include animation(scene-build, 0, 0.50);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.5);
+        @include animation(scene-destroy, 0, 0.50);
+      }
+    }
+    &.house-05 {
+      @include transform-origin(105px 217px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.9);
+        @include animation(scene-build, 0, 0.50);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.45);
+        @include animation(scene-destroy, 0, 0.50);
+      }
+    }
+    &.house-06 {
+      @include transform-origin(105px 217px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.9);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.45);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.house-07 {
+      @include transform-origin(105px 217px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.6);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.house-08 {
+      @include transform-origin(105px 217px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1);
+        @include animation(scene-build, 0, 0.50);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.55);
+        @include animation(scene-destroy, 0, 0.50);
+      }
+    }
+    &.animal-01 {
+      @include transform-origin(126px 290px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.1);
+        @include animation(scene-build, 0, 0.35);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.1);
+        @include animation(scene-destroy, 0, 0.35);
+      }
+    }
+    &.animal-02 {
+      @include transform-origin(247px 212px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.2);
+        @include animation(scene-build, 0, 0.25);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.2);
+        @include animation(scene-destroy, 0, 0.25);
+      }
+    }
+    &.animal-03 {
+      @include transform-origin(301px 149px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.3);
+        @include animation(scene-build, 0, 0.25);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0.25);
+      }
+    }
+    &.animal-04 {
+      @include transform-origin(301px 192px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.4);
+        @include animation(scene-build, 0, 0.60);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.4);
+        @include animation(scene-destroy, 0, 0.60);
+      }
+    }
+  }
+}
+
+.building__scene-03 {
+
+}
+
+.scene-03__inner {
+  .scene__item {
+    &.trees-01 {
+      @include transform-origin(100px 117px);
+      overflow: hidden;
+      &.is-animated {
+        //@include animation(scene-build, 0.4, 0.3);
+        @include animation(scene-build, 0, 01.20);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 01.20);
+      }
+    }
+    &.trees-02 {
+      @include transform-origin(100px 330px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.4);
+        @include animation(scene-build, 0, 01.20);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.4);
+        @include animation(scene-destroy, 0, 01.20);
+      }
+    }
+    &.building-01 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.5);
+        @include animation(scene-build, 0, 1.00);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.2);
+        @include animation(scene-destroy, 0, 1.00);
+      }
+    }
+    &.building-02 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.6);
+        @include animation(scene-build, 0, 0.70);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.25);
+        @include animation(scene-destroy, 0, 0.70);
+      }
+    }
+    &.building-03 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.7);
+        @include animation(scene-build, 0, 0.5);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.3);
+        @include animation(scene-destroy, 0, 0.5);
+      }
+    }
+    &.building-04 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.7);
+        @include animation(scene-build, 0, 0.4);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.35);
+        @include animation(scene-destroy, 0, 0.4);
+      }
+    }
+    &.building-05 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.6);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.4);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.building-06 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.8);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.4);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.building-07 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.6);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.35);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.building-08 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.7);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.15);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.building-09 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.8);
+        @include animation(scene-build, 0, 0.4);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.2);
+        @include animation(scene-destroy, 0, 0.4);
+      }
+    }
+    &.building-10 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.9);
+        @include animation(scene-build, 0, 0.5);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.25);
+        @include animation(scene-destroy, 0, 0.5);
+      }
+    }
+    &.building-11 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 01);
+        @include animation(scene-build, 5, 0.70);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.3);
+        @include animation(scene-destroy, 0, 0.70);
+      }
+    }
+    &.building-12 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.1);
+        @include animation(scene-build, 0, 1.00);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.35);
+        @include animation(scene-destroy, 0, 1.00);
+      }
+    }
+    &.building-13 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.2);
+        @include animation(scene-build, 0, 01.10);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.4);
+        @include animation(scene-destroy, 0, 01.10);
+      }
+    }
+    &.animal-01 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.3, 1.1);
+        @include animation(scene-build, 0, 01.20);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.4, 0.9);
+        @include animation(scene-destroy, 0, 01.20);
+      }
+    }
+    &.animal-02 {
+      @include transform-origin(100px 320px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.2);
+        @include animation(scene-build, 0, 0.80);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.2);
+        @include animation(scene-destroy, 0, 0.80);
+      }
+    }
+    &.animal-03 {
+      @include transform-origin(100px 309px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.3);
+        @include animation(scene-build, 0, 0.60);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0.60);
+      }
+    }
+    &.animal-04 {
+      @include transform-origin(100px 309px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.5);
+        @include animation(scene-build, 0, 0.60);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.5);
+        @include animation(scene-destroy, 0, 0.60);
+      }
+    }
+    &.animal-05 {
+      @include transform-origin(100px 320px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.6);
+        @include animation(scene-build, 0, 0.35);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.6);
+        @include animation(scene-destroy, 0, 0.35);
+      }
+    }
+    &.animal-06 {
+      @include transform-origin(100px 267px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.2);
+        @include animation(scene-build, 0, 0.35);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.2);
+        @include animation(scene-destroy, 0, 0.35);
+      }
+    }
+    &.animal-07 {
+      @include transform-origin(100px 210px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.1);
+        @include animation(scene-build, 0, 0.35);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.4);
+        @include animation(scene-destroy, 0, 0.35);
+      }
+    }
+    &.animal-08 {
+      @include transform-origin(100px 309px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.4);
+        @include animation(scene-build, 0, 0.35);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.4);
+        @include animation(scene-destroy, 0, 0.35);
+      }
+    }
+    &.animal-09 {
+      @include transform-origin(100px 120px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.3);
+        @include animation(scene-build, 0, 01.00);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 01.00);
+      }
+    }
+    &.animal-10 {
+      @include transform-origin(100px 200px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.2);
+        @include animation(scene-build, 0, 01.00);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.2);
+        @include animation(scene-destroy, 0, 01.00);
+      }
+    }
+    &.animal-11 {
+      @include transform-origin(100px 165px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.1);
+        @include animation(scene-build, 0, 01.10);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.1);
+        @include animation(scene-destroy, 0, 01.10);
+      }
+    }
+    &.animal-12 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.3);
+        @include animation(scene-build, 0, 01.10);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 01.10);
+      }
+    }
+  }
+}
+
+.building__scene-04 {
+
+}
+
+.scene-04__inner {
+  .scene__item {
+    &.trees-01 {
+      @include transform-origin(100px 126px);
+      &.is-animated {
+        //@include animation(scene-build, 0.4, 0.5);
+        @include animation(scene-build, 0, 0,85);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.5);
+        @include animation(scene-destroy, 0, 0,85);
+      }
+    }
+    &.trees-02 {
+      @include transform-origin(100px 330px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.6);
+        @include animation(scene-build, 0, 0,85);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.6);
+        @include animation(scene-destroy, 0, 0,85);
+      }
+    }
+    &.building-01 {
+      @include transform-origin(100px 200px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.5);
+        @include animation(scene-build, 0, 0.5);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.1);
+        @include animation(scene-destroy, 0, 0.1);
+      }
+    }
+    &.building-02 {
+      @include transform-origin(100px 225px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.6);
+        @include animation(scene-build, 0, 0.6);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.1);
+        @include animation(scene-destroy, 0, 0.1);
+      }
+    }
+    &.building-03 {
+      @include transform-origin(100px 266px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.8);
+        @include animation(scene-build, 0, 0.75);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.2);
+        @include animation(scene-destroy, 0, 0.75);
+      }
+    }
+    &.building-04 {
+      @include transform-origin(100px 266px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.8);
+        @include animation(scene-build, 0, 0.65);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.25);
+        @include animation(scene-destroy, 0, 0.65);
+      }
+    }
+    &.building-05 {
+      @include transform-origin(100px 225px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.9);
+        @include animation(scene-build, 0, 0.60);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.3);
+        @include animation(scene-destroy, 0, 0.60);
+      }
+    }
+    &.building-06 {
+      @include transform-origin(100px 266px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 01);
+        @include animation(scene-build, 0, 0.55);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3 0.35);
+        @include animation(scene-destroy, 0, 0.55);
+      }
+    }
+    &.building-07 {
+      @include transform-origin(100px 266px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.1);
+        @include animation(scene-build, 0, 0.50);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.4);
+        @include animation(scene-destroy, 0, 0.50);
+      }
+    }
+    &.building-08 {
+      @include transform-origin(100px 266px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.2);
+        @include animation(scene-build, 0, 0.45);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.35);
+        @include animation(scene-destroy, 0, 0.45);
+      }
+    }
+    &.building-09 {
+      @include transform-origin(100px 266px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.3);
+        @include animation(scene-build, 0, 0.40);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.3);
+        @include animation(scene-destroy, 0, 0.40);
+      }
+    }
+
+    &.building-10 {
+      @include transform-origin(100px 270px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.4);
+        @include animation(scene-build, 0, 0.35);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.25);
+        @include animation(scene-destroy, 0, 0.35);
+      }
+    }
+    &.building-11 {
+      @include transform-origin(100px 266px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.4);
+        @include animation(scene-build, 0, 0.35);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.2);
+        @include animation(scene-destroy, 0, 0.35);
+      }
+    }
+    &.building-12 {
+      @include transform-origin(100px 260px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.3);
+        @include animation(scene-build, 0, 0.40);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.2);
+        @include animation(scene-destroy, 0, 0.40);
+      }
+    }
+    &.building-13 {
+      @include transform-origin(100px 266px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.2);
+        @include animation(scene-build, 0, 0.45);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.15);
+        @include animation(scene-destroy, 0, 0.45);
+      }
+    }
+    &.building-14 {
+      @include transform-origin(100px 225px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 1.1);
+        @include animation(scene-build, 0, 0.50);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.1);
+        @include animation(scene-destroy, 0, 0.50);
+      }
+    }
+    &.building-15 {
+      @include transform-origin(100px 225px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 01);
+        @include animation(scene-build, 5, 0.55);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.15);
+        @include animation(scene-destroy, 0, 0.55);
+      }
+    }
+    &.building-16 {
+      @include transform-origin(100px 225px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.9);
+        @include animation(scene-build, 0, 0.60);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.2);
+        @include animation(scene-destroy, 0, 0.60);
+      }
+    }
+    &.building-17 {
+      @include transform-origin(100px 266px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.8);
+        @include animation(scene-build, 0, 0.65);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.25);
+        @include animation(scene-destroy, 0, 0.65);
+      }
+    }
+    &.building-18 {
+      @include transform-origin(100px 225px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.8);
+        @include animation(scene-build, 0, 0.75);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.35);
+        @include animation(scene-destroy, 0, 0.75);
+      }
+    }
+    &.building-19 {
+      @include transform-origin(100px 256px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.6);
+        @include animation(scene-build, 0, 0.80);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.3);
+        @include animation(scene-destroy, 0, 0.80);
+      }
+    }
+    &.building-20 {
+      @include transform-origin(100px 30px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.6);
+        @include animation(scene-build, 0, 0.80);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.3, 0.4);
+        @include animation(scene-destroy, 0, 0.80);
+      }
+    }
+
+    &.animal-01 {
+      @include transform-origin(100px 300px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.1);
+        @include animation(scene-build, 0, 0.1);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.1);
+        @include animation(scene-destroy, 0, 0.1);
+      }
+    }
+    &.animal-02 {
+      @include transform-origin(100px 320px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.2);
+        @include animation(scene-build, 0, 0.75);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.2);
+        @include animation(scene-destroy, 0, 0.75);
+      }
+    }
+    &.animal-03 {
+      @include transform-origin(100px 330px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.3);
+        @include animation(scene-build, 0, 0.65);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0.65);
+      }
+    }
+    &.animal-04 {
+      @include transform-origin(100px 300px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.5);
+        @include animation(scene-build, 0, 0.60);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.4);
+        @include animation(scene-destroy, 0, 0.60);
+      }
+    }
+    &.animal-05 {
+      @include transform-origin(100px 320px);
+      &.is-animated {
+        //@include animation(scene-build, 0.5, 0.6);
+        @include animation(scene-build, 0, 0.50);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0.50);
+      }
+    }
+    &.animal-06 {
+      @include transform-origin(100px 260px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.2);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.2);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.animal-07 {
+      @include transform-origin(100px 190px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.1);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.1);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.animal-08 {
+      @include transform-origin(100px 310px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.4);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.35);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.animal-09 {
+      @include transform-origin(100px 120px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.3);
+        @include animation(scene-build, 0, 0,80);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0,80);
+      }
+    }
+    &.animal-10 {
+      @include transform-origin(100px 30px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.2);
+        @include animation(scene-build, 0, 0,80);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.2);
+        @include animation(scene-destroy, 0, 0,80);
+      }
+    }
+    &.animal-11 {
+      @include transform-origin(100px 164px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.1);
+        @include animation(scene-build, 0, 0.1);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.1);
+        @include animation(scene-destroy, 0, 0.1);
+      }
+    }
+    &.animal-12 {
+      @include transform-origin(100px 250px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.3);
+        @include animation(scene-build, 0, 0,80);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0,80);
+      }
+    }
+
+    &.cloud-01 {
+      @include transform-origin(100px 30px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.2);
+        @include animation(scene-build, 0, 0.30);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.2);
+        @include animation(scene-destroy, 0, 0.30);
+      }
+    }
+    &.cloud-02 {
+      @include transform-origin(100px 30px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.3);
+        @include animation(scene-build, 0, 0.35);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0.35);
+      }
+    }
+    &.cloud-03 {
+      @include transform-origin(100px 30px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.2);
+        @include animation(scene-build, 0, 0.40);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.2);
+        @include animation(scene-destroy, 0, 0.40);
+      }
+    }
+    &.cloud-04 {
+      @include transform-origin(100px 30px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.3);
+        @include animation(scene-build, 0, 0.45);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.3);
+        @include animation(scene-destroy, 0, 0.45);
+      }
+    }
+    &.cloud-05 {
+      @include transform-origin(100px 30px);
+      &.is-animated {
+        //@include animation(scene-build, 0.6, 0.2);
+        @include animation(scene-build, 0, 0.50);
+      }
+      &.not-animated {
+        //@include animation(scene-destroy, 0.5, 0.2);
+        @include animation(scene-destroy, 0, 0.50);
+      }
+    }
+  }
+}
+
+
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .building__scene {
+    height: 100%;
+  }
+  .scene__item {
+    //opacity: 0;
+    transform: none !important;
+    &.is-animated {
+      //opacity: 1;
+    }
+    &.not-animated {
+      @include animation-fill-mode(none);
+    }
+  }
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) and(min-width: 1600px) {
+  .scene__inner {
+    .scene__svg {
+      height: 80%;
+    }
+    .scene__item {
+      -webkit-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+    }
+  }
+}
+
+/*-------Section Infrastructure-------*/
+.section-infrastructure {
+  padding-top: 0;
+  .container{
+    height: auto;
+    .homepage__row-heading{
+      width: auto;
+    }
+  }
+  .container-fluid {
+    height: 100%;
+  }
+  @include respond(1024) {
+    //height: auto;
+  }
+}
+
+.section-infrastructure__inner {
+  margin: 0 -15px;
+  height: 100%;
+  @include display-flex();
+  @include flex-wrap();
+
+  @include respond(1024) {
+
+  }
+}
+
+.section-infrastructure__item {
+  overflow: hidden;
+  position: relative;
+  &.vertical {
+    width: 30%;
+    max-width: 30%;
+    height: 100%;
+  }
+  &.horizontal {
+    width: 70%;
+    max-width: 70%;
+    height: 50%;
+    max-height: 50%;
+    @include display-flex();
+
+    &.bottom {
+      margin-left: auto;
+      position: relative;
+      top: -50%;
+    }
+  }
+
+  @include respond(1024) {
+    &.vertical {
+      width: 45%;
+      max-width: 45%;
+      //height: 400px;
+      //max-height: 400px;
+      height: 65%;
+      max-height: 65%;
+    }
+    &.horizontal {
+      &.top {
+        width: 55%;
+        max-width: 55%;
+        //height: 400px;
+        //max-height: 400px;
+        height: 65%;
+        max-height: 65%;
+        @include flex-wrap();
+      }
+      &.bottom {
+        width: 100%;
+        max-width: 100%;
+        //height: 200px;
+        //max-height: 200px;
+        height: 35%;
+        max-height: 35%;
+        top: auto;
+      }
+    }
+  }
+  @include respond(570) {
+    //&.vertical {
+    //  height: 260px;
+    //  max-height: 260px;
+    //}
+    //&.horizontal {
+    //  &.top {
+    //    height: 260px;
+    //    max-height: 260px;
+    //  }
+    //}
+  }
+}
+
+.section-infrastructure__item-inner {
+  position: relative;
+  height: 100%;
+  @include display-flex();
+  @include ai-flex-center();
+  @include transition(0.5s all ease-in-out);
+}
+
+.section-infrastructure__subitem {
+  position: relative;
+  overflow: hidden;
+  @include display-flex();
+  @include ai-flex-center();
+  &.subitem-col-08 {
+    width: 70%;
+    max-width: 70%;
+  }
+  &.subitem-col-04 {
+    width: 30%;
+    max-width: 30%;
+  }
+
+  &.subitem-col-05 {
+    width: 40%;
+    max-width: 40%;
+  }
+  &.subitem-col-07 {
+    width: 60%;
+    max-width: 60%;
+  }
+
+  @include respond(1024) {
+    &.subitem-col-08 {
+      width: 100%;
+      max-width: 100%;
+      //height: 200px;
+      height: 50%;
+    }
+    &.subitem-col-04 {
+      //height: 200px;
+      height: 50%;
+      width: 100%;
+      max-width: 100%;
+    }
+    &.subitem-col-05 {
+      width: 45%;
+      max-width: 45%;
+      //height: 200px;
+      height: 100%;
+    }
+    &.subitem-col-07 {
+      width: 55%;
+      max-width: 55%;
+      //height: 200px;
+      height: 100%;
+    }
+  }
+  @include respond(570) {
+    //&.subitem-col-08 {
+    //  height: 130px;
+    //}
+    //&.subitem-col-04 {
+    //  height: 130px;
+    //}
+  }
+}
+
+.section-infrastructure__item-01 {
+  position: relative;
+  .section-infrastructure__flip-item {
+    background-color: #a7a9ac;
+  }
+
+  .section-infrastructure__item-inner {
+    @include flex-wrap();
+  }
+
+  .h1 {
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    font-weight: 900;
+    //@include font-size(36);
+    line-height: 1.3;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 1;
+  }
+  .section-infrastructure__img-wrap {
+    margin-top: auto;
+    height: 75%;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+
+  @include respond(1024) {
+    .h1 {
+      @include font-size(20);
+      padding-right: 10px;
+      top: 15px;
+    }
+    .section-infrastructure__img-wrap{
+      height: 80%;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+  @include respond(570) {
+    .section-infrastructure__img-wrap{
+      height: 85%;
+    }
+  }
+}
+
+.section-infrastructure__item-02 {
+  .section-infrastructure__flip-item {
+    background-color: #bcbec0;
+  }
+  .section-infrastructure__img-wrap {
+    -webkit-background-size: 70%;
+    background-size: 70%;
+    background-position: center;
+  }
+  @include respond(1024) {
+    .section-infrastructure__img-wrap{
+      height: 65%;
+      -webkit-background-size: 70%;
+      background-size: 70%;
+    }
+  }
+  @include respond(570) {
+    .section-infrastructure__img-wrap{
+      height: 65%;
+      -webkit-background-size: 90%;
+      background-size: 90%;
+    }
+  }
+}
+
+.section-infrastructure__item-03 {
+  .section-infrastructure__flip-item {
+    background-color: #d8d8d8;
+  }
+  .section-infrastructure__img-wrap {
+    -webkit-background-size: 75%;
+    background-size: 75%;
+    background-position: center;
+  }
+
+  @include respond(1024) {
+    .section-infrastructure__img-wrap {
+      height: 85%;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+}
+
+.section-infrastructure__item-04 {
+  .section-infrastructure__flip-item {
+    background-color: #f1f2f2;
+  }
+  .section-infrastructure__img-wrap {
+    -webkit-background-size: 75%;
+    background-size: 75%;
+    background-position: center bottom;
+  }
+  @include respond(1024) {
+    .section-infrastructure__img-wrap {
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+}
+
+.section-infrastructure__item-05 {
+  .section-infrastructure__flip-item {
+    background-color: #a7a9ac;
+  }
+  .section-infrastructure__img-wrap {
+    -webkit-background-size: 80%;
+    background-size: 80%;
+    background-position: left center;
+  }
+}
+
+@media screen  and (min-width: 1600px){
+  .section-infrastructure__item-03 {
+    .section-infrastructure__img-wrap {
+      -webkit-background-size: 60%;
+      background-size: 60%;
+    }
+  }
+  .section-infrastructure__item-04 {
+    .section-infrastructure__img-wrap {
+      -webkit-background-size: 60%;
+      background-size: 60%;
+    }
+  }
+}
+
+.section-infrastructure__img-wrap {
+  @include center();
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  img {
+    max-height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  @include respond(1024) {
+    .section-infrastructure__img-wrap{
+      -webkit-background-size: 75%;
+      background-size: 75%;
+    }
+  }
+}
+
+.infrastructure-link__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  //z-index: -1;
+  @include respond(1024){
+    z-index: 5;
+  }
+}
+
+.infrastructure-flip-item__parent {
+  @include transition(1s all ease-in-out);
+  &:hover, &:focus, &:active {
+    //@include transform-scale(0.95, 0.95);
+
+    .infrastructure-link__overlay {
+      z-index: 5;
+    }
+    .section-infrastructure__flip-item {
+      //-webkit-transform: scale(0.95, 0.95) perspective(1200px) translate3d(-0%, 0, -100px) rotateY(180deg);
+      //transform: scale(0.95, 0.95) perspective(1200px) translate3d(-0%, 0, -100px) rotateY(180deg);
+
+      //-webkit-transform: perspective(2000px) translate3d(-0%, 0, -100px) rotateY(180deg);
+      //transform: perspective(2000px) translate3d(-0%, 0, -100px) rotateY(180deg);
+
+      -webkit-transform: perspective(1000px) translate3d(-0%, 0, -100px) rotateY(180deg);
+      transform: perspective(1000px) translate3d(-0%, 0, -100px) rotateY(180deg);
+      &.horizontal {
+        //-webkit-transform: scale(0.95, 0.95) perspective(1200px) translate3d(-0%, 0, -100px) rotateX(180deg);
+        //transform: scale(0.95, 0.95) perspective(1200px) translate3d(-0%, 0, -100px) rotateX(180deg);
+        //
+        //-webkit-transform: perspective(2000px) translate3d(-0%, 0, -100px) rotateX(180deg);
+        //transform: perspective(2000px) translate3d(-0%, 0, -100px) rotateX(180deg);
+
+        -webkit-transform: perspective(1000px) translate3d(-0%, 0, -100px) rotateX(180deg);
+        transform: perspective(1000px) translate3d(-0%, 0, -100px) rotateX(180deg);
+      }
+    }
+  }
+}
+
+.section-infrastructure__flip-item {
+  @include square(100%);
+  @include transition(1s all ease-in-out);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, -100px);
+  transform: translate3d(0, 0, -100px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.section-infrastructure__flip-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  @include square(100%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  @include transition(1s all ease-in-out);
+  background-color: inherit;
+  border: 1px solid transparent;
+
+  &.front {
+    -webkit-transform: rotateY(0) translate3d(0, 0, 300px);
+    transform: rotateY(0) translate3d(0, 0, 300px);
+  }
+
+  &.right {
+    -webkit-transform: rotateY(90deg) translate3d(0, 0, 0px);
+    transform: rotateY(90deg) translate3d(0, 0, 0px);
+    @include transform-origin(right);
+    border: 1px solid rgba(1, 1, 1, 0.4);
+    opacity: 0.8;
+  }
+
+  &.back {
+    -webkit-transform: rotateY(180deg) translate3d(0, 0, 0px);
+    transform: rotateY(180deg) translate3d(0, 0, 0px);
+    @include display-flex();
+    @include ai-flex-center();
+    @include jc-flex-center();
+  }
+
+  &.left {
+    -webkit-transform: rotateY(-90deg) translate3d(0, 0, 0px);
+    transform: rotateY(-90deg) translate3d(0, 0, 0px);
+    @include transform-origin(left);
+    border: 1px solid rgba(1, 1, 1, 0.4);
+    opacity: 0.8;
+  }
+
+  &.bottom {
+    -webkit-transform: rotateX(-90deg) translate3d(0, 0, 0px);
+    transform: rotateX(-90deg) translate3d(0, 0, 0px);
+    @include transform-origin(bottom);
+    border: 1px solid rgba(1, 1, 1, 0.4);
+    opacity: 0.8;
+  }
+
+  &.top {
+    -webkit-transform: rotateX(90deg) translate3d(0, 0, 0px);
+    transform: rotateX(90deg) translate3d(0, 0, 0px);
+    @include transform-origin(top);
+    border: 1px solid rgba(1, 1, 1, 0.4);
+    opacity: 0.8;
+  }
+}
+
+.section-infrastructure__side-link {
+  display: block;
+  color: $textColor;
+  //@include font-size(30);
+  @include font-size(36);
+  font-weight: 900;
+  @include transition(0.3s all ease-in-out);
+
+  &.horizontal {
+    @include rotate(-180deg);
+  }
+
+  &:hover, &:focus, &:active {
+    color: $textColor;
+  }
+
+  @include respond(1024) {
+    @include font-size(20);
+  }
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .section-infrastructure {
+    overflow-y: hidden;
+  }
+  .section-infrastructure__img-wrap {
+    max-height: none;
+  }
+}
+
+/*----section future-----*/
+
+.section-future {
+  -webkit-background-size: 100% 460px;
+  background-size: 100% 460px;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 700px;
+  position: relative;
+  //height: auto;
+  .container {
+    //height: auto;
+  }
+  &:after {
+    content: '';
+    display: block;
+    //background: url("#{$imgUrl}homepage/future-bg-bottom.png") no-repeat center /cover;
+    background: url("#{$imgUrl}homepage/future-bg-bottom.png") no-repeat center /100% 100%;
+    @include size(100%, 240px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .next-page__link {
+    .icon {
+      stroke: $textColor;
+    }
+    &:hover, &:focus, &:active {
+      .icon {
+        stroke: #fff;
+      }
+    }
+  }
+
+  @include respond(1200) {
+    -webkit-background-size: 100% 500px;
+    background-size: 100% 500px;
+    &:after {
+      height: 200px;
+
+    }
+  }
+
+  @include respond(1024) {
+    height: 500px;
+    -webkit-background-size: 100% 330px;
+    background-size: 100% 330px;
+    &:after {
+      height: 170px;
+    }
+  }
+  @include respond(570) {
+    -webkit-background-size: 200% 360px;
+    background-size: 200% 360px;
+    &:after {
+      height: 140px;
+    }
+  }
+}
+
+.future__inner {
+  position: relative;
+  height: 100%;
+}
+
+.future__item {
+  img {
+    width: 100%;
+  }
+}
+
+.future__item-info {
+  position: absolute;
+  background-color: #fff;
+  font-weight: 500;
+  //opacity: 0;
+  //visibility: hidden;
+  //opacity: 1;
+  //visibility: visible;
+  z-index: 2;
+  color: $textColor;
+  padding: 10px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  @include slideTransition();
+  //z-index: -1;
+  //@include translateY(20px);
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 20px 0px 0px;
+    border-color: transparent #ffffff transparent transparent;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    @include rotate(180deg);
+    @include slideTransition();
+  }
+
+  &:hover, &:active, &:focus {
+    //color: $textColor;
+    background-color: $textColor;
+    color: #fff;
+    &:after {
+      border-color: transparent $textColor transparent transparent;
+    }
+  }
+
+  @include respond(1024) {
+    @include font-size(18);
+  }
+
+  @include respond(768) {
+    @include font-size(16);
+  }
+}
+
+.future__item-wrap {
+  position: absolute;
+
+  &:hover, &:focus, &:active {
+    .future__item-info {
+      //opacity: 1;
+      //visibility: visible;
+      //z-index: 2;
+      //@include translateY(0px);
+    }
+  }
+  &.car {
+    //@include animation(car-flight, 10, 0, infinite);
+    //@include animation-fill-mode(forwards);
+  }
+  &.car-01 {
+    width: 6%;
+    top: 22%;
+    left: 5%;
+    @include animation-name(car-flight);
+    @include animation-duration(15s);
+    @include animation-delay(-2.5s);
+    @include animation-iteration-count(infinite);
+    @include animation-fill-mode(both);
+    @include respond(1024) {
+      top: 20%;
+      width: 60px;
+    }
+  }
+  &.car-02 {
+    width: 10%;
+    top: 12%;
+    right: 12%;
+    z-index: 11;
+    .future__item{
+      @include animation-name(car-flight);
+      @include animation-duration(15s);
+      @include animation-delay(-8.5s);
+      @include animation-fill-mode(both);
+      @include animation-iteration-count(infinite);
+    }
+    .future__item-info {
+      top: 0;
+      left: -124%;
+    }
+
+    @include respond(1024) {
+      //top: 4%;
+      width: 70px;
+      .future__item-info {
+        left: -170%;
+      }
+    }
+    @include respond(570) {
+      top: 10%;
+      .future__item-info {
+        top: 100%;
+      }
+    }
+  }
+  &.future-building-top {
+    width: 19%;
+    height: 200px;
+    bottom: 242px;
+    left: 0;
+    .future__item-info {
+      top: 30%;
+      left: 10%;
+    }
+
+    @include respond(1200) {
+      bottom: 202px;
+    }
+    @include respond(1024) {
+      bottom: 172px;
+      .future__item-info {
+        top: 20%;
+        left: -40%;
+        margin-left: 34px;
+      }
+    }
+    @include respond(768) {
+      .future__item-info {
+        margin-left: 15px;
+      }
+    }
+    @include respond(570) {
+      bottom: 142px;
+      .future__item-info {
+        //left: 6%;
+        top: 50%;
+        left: -15px;
+        width: 75px;
+        padding: 10px 5px;
+        margin-left: 0;
+      }
+    }
+  }
+  &.building-top {
+    width: 19%;
+    bottom: 242px;
+    left: 31%;
+    .future__item-info {
+      top: 0;
+      left: -40%;
+    }
+
+    @include respond(1200) {
+      bottom: 202px;
+      .future__item-info {
+        left: -70%;
+      }
+    }
+    @include respond(1024) {
+      bottom: 172px;
+      .future__item-info {
+        //left: -100%;
+      }
+    }
+    @include respond(768) {
+      .future__item-info {
+        //left: -150%;
+        left: -100%;
+        top: -15px;
+      }
+    }
+    @include respond(570) {
+      bottom: 142px;
+      width: 38%;
+      left: 19%;
+      .future__item-info {
+        //top: -55%;
+        //left: -45%;
+        //left: 0;
+
+        top: -19%;
+        left: -50%;
+      }
+    }
+  }
+  &.windmill {
+    //width: 300px;
+    width: 19%;
+    bottom: 242px;
+    right: -7%;
+
+    .future__item-info {
+      top: 9%;
+      left: -12%;
+    }
+    .is-moving {
+      display: none;
+    }
+
+    &.hover, &:focus, &:active {
+      img {
+        &.is-static {
+          display: none;
+        }
+        &.is-moving {
+          display: block;
+        }
+      }
+    }
+
+    @include respond(1450) {
+      right: 0;
+    }
+    @include respond(1200) {
+      bottom: 202px;
+      .future__item-info {
+        left: -30%;
+      }
+    }
+    @include respond(1024) {
+      bottom: 172px;
+    }
+    @include respond(768) {
+      .future__item-info {
+        left: -80%;
+      }
+    }
+    @include respond(570) {
+      bottom: 142px;
+      width: 30%;
+      .future__item-info {
+        left: -25%;
+      }
+    }
+  }
+
+  &.building-bottom {
+    //height: 118px;
+    //bottom: 44px;
+    height: 127px;
+    bottom: 38px;
+    .future__item-info {
+      top: -71px;
+      &:after {
+        top: auto;
+        left: auto;
+        right: -2px;
+        bottom: -16px;
+        @include rotate(-90deg);
+      }
+    }
+
+    @include respond(1200) {
+      //height: 100px;
+      //bottom: 35px;
+      height: 105px;
+      bottom: 32px;
+    }
+    @include respond(1024) {
+      //height: 89px;
+      //bottom: 28px;
+      height: 90px;
+      bottom: 27px;
+      .future__item-info {
+        top: -43px;
+      }
+    }
+    @include respond(570) {
+      height: 73px;
+      bottom: 23px;
+    }
+  }
+
+  &.building-bottom-01 {
+    left: 2%;
+    z-index: 1;
+
+    .future__item-info {
+      left: 0%;
+    }
+    .future__item {
+      height: 100%;
+    }
+    img {
+      width: auto;
+      height: 100%;
+    }
+
+    @include respond(1024) {
+      left: 0;
+      .future__item-info {
+        display: none;
+      }
+    }
+    @include respond(768) {
+      left: -41%;
+    }
+    @include respond(570) {
+      left: -100%;
+    }
+  }
+  &.building-bottom-02 {
+    right: 4%;
+    z-index: 1;
+
+    .future__item-info {
+      left: -23%;
+    }
+    .future__item {
+      height: 100%;
+    }
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+  @include respond(1024) {
+    right: 0;
+  }
+}
+
+/*-----Section Constructor---------*/
+.section-constructor {
+  background-color: #a7a9ac;
+  overflow: hidden;
+
+  h2 {
+    color: #fff;
+  }
+  .next-page__link {
+    .icon {
+      stroke: $textColor;
+    }
+    &:hover, &:focus, &:active {
+      .icon {
+        stroke: #fff;
+      }
+    }
+  }
+
+  @include respond(1024) {
+    .page__row-heading {
+      display: none;
+    }
+  }
+
+  @include respond(570) {
+    //height: 550px;
+  }
+}
+
+.section-constructor__inner {
+  height: 100%;
+  position: relative;
+}
+
+.constructor__img-wrap {
+  position: absolute;
+  left: 15%;
+  bottom: -20%;
+
+  &:hover, &:focus, &:active {
+    .constructor__bubble-start {
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+    }
+    .constructor__bubble {
+      @include animation(bubble-width, 0.3, 0.2, 1);
+    }
+    .constructor__bubble-text {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+    }
+    .constructor__bubble-inner-01 {
+      -webkit-animation: typing 0.5s steps(30, end);
+      animation: typing 0.5s steps(30, end);
+      -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+    .constructor__bubble-inner-02 {
+      -webkit-animation: typing 0.5s steps(30, end);
+      animation: typing 0.5s steps(30, end);
+      -webkit-animation-delay: 1.1s;
+      animation-delay: 1.1s;
+    }
+    .constructor__bubble-inner-03 {
+      -webkit-animation: typing 0.5s steps(30, end);
+      animation: typing 0.5s steps(30, end);
+      -webkit-animation-delay: 1.6s;
+      animation-delay: 1.6s;
+    }
+  }
+
+  @include respond(1024) {
+    bottom: 0;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      bottom: -20%;
+    }
+    &:hover, &:focus, &:active {
+      .constructor__bubble {
+        @include animation(bubble-width-mob, 0.3, 0.2, 1);
+      }
+    }
+  }
+  @include respond(768) {
+    left: 9%;
+  }
+}
+
+.constructor__img {
+  //width: 450px;
+  width: 500px;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include respond(1350){
+    width: 450px;
+  }
+  @include respond(1024) {
+    width: 250px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .constructor__img {
+    width: auto;
+    height: 650px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width: 1024px){
+  .constructor__img {
+    height: 400px;
+  }
+  .constructor__img-wrap{
+    bottom: 0;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width: 570px){
+  .constructor__img {
+    height: 250px;
+  }
+}
+
+.constructor__bubble-start {
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  @include transition(0.3s all ease-in-out);
+  @include scaleTranslate(1, 1, -50%, -50%);
+  &:hover, &:focus, &:active {
+    color: $textColor;
+  }
+  @include respond(1024) {
+    font-size: 60px;
+  }
+}
+
+.constructor__bubble-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: $textColor;
+  padding: 15px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  @include transition(0.3s all ease-in-out);
+  @include respond(1024) {
+    padding: 10px;
+  }
+}
+
+.constructor__bubble-inner {
+  display: block;
+  width: 0;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation-fill-mode: forwards !important;
+  animation-fill-mode: forwards !important;
+  @include transition(0.3s all ease-in-out);
+}
+
+.constructor__bubble {
+  position: absolute;
+  top: 50px;
+  left: 100%;
+  padding: 15px 30px 15px 15px;
+  @include transition(none);
+  min-width: 130px;
+  height: 130px;
+  background: #fff;
+  @include font-size(22);
+  font-weight: 900;
+  color: $textColor;
+  @include transform-origin(left);
+  @include transition(0.3s all ease-in-out);
+  @include animation-fill-mode(forwards);
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -44px;
+    top: 40%;
+    background: url("#{$imgUrl}homepage/constructor-arrow.svg") no-repeat center /contain;
+    @include size(60px, 40px);
+  }
+
+  &:hover, &:focus, &:active {
+    .constructor__bubble-start {
+      color: $textColor;
+    }
+    .constructor__bubble-text {
+      color: $textColor;
+    }
+  }
+
+  @include respond(1024) {
+    @include respond(1024) {
+      min-width: 97px;
+      height: 97px;
+      @include font-size(18);
+    }
+  }
+
+  @include respond(768) {
+    left: 84%;
+  }
+
+  @include respond(570) {
+    left: 6%;
+    top: -116px;
+    &:after {
+      left: -10px;
+      top: 100%;
+      margin-top: -2px;
+      @include rotate(180deg);
+    }
+  }
+  @include respond(360) {
+    left: -3%;
+  }
+}
+
+/*-----*/
+.go__top-link{
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 20px;
+  height: 20px;
+  border-width: 2px 0 0px 2px;
+  border-color: $textColor;
+  border-style: solid;
+  @include rotate(45deg);
+  z-index: 50;
+  @include slideTransition();
+
+  &:hover, &:focus, &:active{
+    border-color: #fff;
+  }
+
+  &.is-visible{
+    display: block;
+  }
+}

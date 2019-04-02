@@ -1,0 +1,118 @@
+.page__section-conclusion {
+  min-height: 100vh;
+  height: auto;
+  .page__section-heading {
+    @include center();
+    h1{
+      margin-bottom: 50px;
+    }
+    h3{
+      margin-bottom: 50px;
+      br.show-in-mob{
+        display: none;
+      }
+    }
+  }
+  .page__section-bg {
+    background-color: #bcbec0;
+  }
+  .page__svg-wrap {
+    width: 60%;
+    height: 100%;
+    padding: 50px 15px;
+    @include center();
+    text-align: center;
+  }
+  .page__svg {
+    width: 100%;
+    height: 100%;
+    &.hide-in-mob{
+      display: block;
+    }
+    &.show-in-mob{
+      display: none;
+    }
+  }
+  .svg__text {
+    @include font-size(18);
+    fill: $textColor;
+    font-weight: 500;
+    font-family: $Notosans;
+    text-align: center;
+  }
+  .svg__text-heading {
+    fill: #753905;
+    @include font-size(16);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  @include respond(1450){
+    .page__svg-wrap {
+      width: 80%;
+    }
+  }
+
+  @include respond(1024) {
+    @include display-flex();
+    @include flex-direction-col();
+    padding: 160px 0 60px;
+    .page__section-heading {
+      background: transparent;
+      padding: 0 15px;
+      margin-bottom: 4rem;
+      h1{
+        margin-bottom: 25px;
+      }
+      h3{
+        br.show-in-mob{
+          display: block;
+        }
+      }
+    }
+    .page__svg-wrap {
+      width: 97%;
+      //height: 50vh;
+      padding: 0 15px;
+    }
+    .page__svg{
+      width: 100%;
+      &.hide-in-mob{
+        display: none;
+      }
+      &.show-in-mob{
+        display: block;
+      }
+    }
+    .share__icons-wrap {
+       bottom: 12vh;
+     }
+  }
+  @include respond(768) {
+    .page__section-heading {
+      max-width: 570px;
+      br {
+        display: none;
+      }
+    }
+  }
+  @include respond(570) {
+    padding: 140px 0 60px;
+
+    .page__section-heading{
+      margin-bottom: 0;
+    }
+
+    .share__icons-wrap {
+      bottom: 16vh;
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .page__section-conclusion {
+    .page__svg-wrap{
+      height: 500px ;
+    }
+  }
+}

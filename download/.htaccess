@@ -1,0 +1,4 @@
+AuthName "Member Only"
+AuthType Basic
+AuthUserFile /home/reactdigi/public_html/nata/stem/download/.htpasswd
+require user stem

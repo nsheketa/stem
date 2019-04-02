@@ -1,0 +1,56 @@
+.page__section-download{
+  background-color: #d1d3d4;
+
+  @include respond(1024){
+    height: auto;
+    .share__icons-wrap{
+      bottom: 11vh;
+    }
+  }
+  @include respond(570){
+    .share__icons-wrap{
+      bottom: 7vh;
+    }
+  }
+}
+
+.download__wrap{
+  @include respond(1024){
+    padding-bottom: 50px;
+  }
+}
+
+.download__item{
+  margin-bottom: 2rem;
+  position: relative;
+  .link-overlay{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+.dropdown-item__content{
+  font-weight: 900;
+  color: #fff;
+  background-color: #4fba74;
+  width: 100%;
+  padding: 10px;
+  @include respond(1200){
+    min-height: 74px;
+  }
+  @include respond(1024){
+    min-height: 10px;
+  }
+}
+
+.download__item-img{
+  width: 100%;
+  img{
+    width: 100%;
+  }
+}

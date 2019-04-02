@@ -1,0 +1,488 @@
+/*--------------animal hand waving-----------*/
+//dad
+@-webkit-keyframes wave{
+  0%,100%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  35%,80%{
+    -webkit-transform: rotate(-125deg);
+    transform: rotate(-125deg);
+  }
+  50%{
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+}
+@keyframes wave{
+  0%,100%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  35%,80%{
+    -webkit-transform: rotate(-125deg);
+    transform: rotate(-125deg);
+  }
+  50%{
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+}
+
+//mum
+@-webkit-keyframes wave-reverse{
+  0%,100%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  35%,80%{
+    -webkit-transform: rotate(117deg);
+    transform: rotate(117deg);
+  }
+  50%{
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@keyframes wave-reverse{
+  0%,100%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  35%,80%{
+    -webkit-transform: rotate(117deg);
+    transform: rotate(117deg);
+  }
+  50%{
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+//sis
+@-webkit-keyframes wave-middle{
+  0%,100%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  35%,80%{
+    -webkit-transform: rotate(67deg);
+    transform: rotate(67deg);
+  }
+  50%{
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+  }
+}
+@keyframes wave-middle{
+  0%,100%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  35%,80%{
+    -webkit-transform: rotate(67deg);
+    transform: rotate(67deg);
+  }
+  50%{
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+  }
+}
+
+//bro
+@-webkit-keyframes wave-small-reverse{
+  0%,100%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  35%,80%{
+    -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+  }
+  50%{
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+  }
+}
+@keyframes wave-small-reverse{
+  0%,100%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  35%,80%{
+    -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+  }
+  50%{
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+  }
+}
+
+/*---------city building animation----------*/
+
+//@-webkit-keyframes scene-build{
+//  0%{
+//    -webkit-transform: rotateX(90deg) skewX(-40deg) scaleY(0);
+//    transform: rotateX(90deg) skewX(-40deg) scaleY(0);
+//  }
+//  100%{
+//    -webkit-transform: rotateX(0) skewX(0) scaleY(1);
+//    transform: rotateX(0) skewX(0) scaleY(1);
+//  }
+//}
+//@keyframes scene-build{
+//  0%{
+//    -webkit-transform: rotateX(90deg) skewX(-20deg) scaleY(0);
+//    transform: rotateX(90deg) skewX(-20deg) scaleY(0);
+//  }
+//  100%{
+//    -webkit-transform: rotateX(0) skewX(0) scaleY(1);
+//    transform: rotateX(0) skewX(0) scaleY(1);
+//  }
+//}
+
+/*---------city destroy animation----------*/
+
+//@-webkit-keyframes scene-destroy{
+//  0%{
+//    -webkit-transform: rotateX(0) skewX(0) scaleX(1);
+//    transform: rotateX(0) skewX(0) scaleX(1);
+//
+//  }
+//  100%{
+//    -webkit-transform: rotateX(90deg) skewX(-20deg) scaleX(0);
+//    transform: rotateX(90deg) skewX(-20deg) scaleX(0);
+//  }
+//}
+//@keyframes scene-destroy{
+//  0%{
+//    -webkit-transform: rotateX(0) skewX(0) scaleY(1);
+//    transform: rotateX(0) skewX(0) scaleY(1);
+//
+//  }
+//  100%{
+//    -webkit-transform: rotateX(90deg) skewX(-20deg) scaleX(0);
+//    transform: rotateX(90deg) skewX(-20deg) scaleX(0);
+//  }
+//}
+/*
+@-webkit-keyframes scene-build{
+  0%{
+    -webkit-transform: rotateX(90deg) scaleY(0);
+    transform: rotateX(90deg) scaleY(0);
+  }
+  100%{
+    -webkit-transform: rotateX(0) scaleY(1);
+    transform: rotateX(0) scaleY(1);
+  }
+}
+@keyframes scene-build{
+  0%{
+    -webkit-transform: rotateX(90deg) scaleY(0);
+    transform: rotateX(90deg) scaleY(0);
+  }
+  100%{
+    -webkit-transform: rotateX(0) scaleY(1);
+    transform: rotateX(0) scaleY(1);
+  }
+}
+*/
+//@keyframes scene-destroy{
+//  0%{
+//    transition-timing-function: ease-in;
+//    transform: translateY(0);
+//    opacity: 1;
+//  }
+//  100%{
+//    transition-timing-function: ease-in;
+//    transform: translateY(100px);
+//    opacity: 0;
+//  }
+//}
+//@keyframes scene-build{
+//  0%{
+//  transition-timing-function: ease-in;
+//    transform: translateY(100px);
+//    opacity: 0;
+//  }
+//  100%{
+//    transform: translateY(0);
+//  transition-timing-function: ease-in;
+//  opacity: 1;
+//  }
+//}
+/*
+@-webkit-keyframes scene-destroy{
+  0%{
+    -webkit-transform: rotateX(0) scaleY(1);
+    transform: rotateX(0) scaleY(1);
+
+  }
+  100%{
+    -webkit-transform: rotateX(90deg) scaleY(0);
+    transform: rotateX(90deg) scaleY(0);
+  }
+}
+@keyframes scene-destroy{
+  0%{
+    -webkit-transform: rotateX(0deg) scaleY(1);
+    transform: rotateX(0deg) scaleY(1);
+
+  }
+  100%{
+    -webkit-transform: rotateX(90deg) scaleY(0);
+    transform: rotateX(90deg) scaleY(0);
+  }
+}
+*/
+
+/*---*/
+@-webkit-keyframes scene-destroy{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes scene-destroy{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scene-build{
+   0%{
+     opacity: 0;
+   }
+   100%{
+     opacity: 1;
+   }
+}
+@keyframes scene-build{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+/*---*/
+@-webkit-keyframes scene-destroy-opacity{
+  0%{
+    opacity: 1;
+
+  }
+  100%{
+   opacity: 0;
+  }
+}
+@keyframes scene-destroy-opacity{
+  0%{
+    opacity: 1;
+  }
+  100%{
+   opacity: 0;
+  }
+}
+
+/*---------arrows animation----------*/
+@-webkit-keyframes move-on-hover {
+  0%, 100% {
+    @include translateX(0);
+  }
+  25%, 75% {
+    @include translateX(7px);
+  }
+  50% {
+    @include translateX(5px);
+  }
+}
+@keyframes move-on-hover {
+  0%, 100% {
+    @include translateX(0);
+  }
+  25%, 75% {
+    @include translateX(7px);
+  }
+  50% {
+    @include translateX(5px);
+  }
+}
+
+/*---------satellite animation----------*/
+@-webkit-keyframes satellite-flight {
+  0% {
+    @include translateY(0px);
+  }
+  25%, 75% {
+    -webkit-transform: translateY(30px) rotateY(-15deg);
+    transform: translateY(30px) rotateY(-15deg);
+  }
+  50% {
+    -webkit-transform: translateY(-22px) rotateY(10deg);
+    transform: translateY(-22px) rotateY(10deg);
+  }
+  90%{
+    -webkit-transform: translateY(15px) rotateY(0deg);
+    transform: translateY(15px) rotateY(0deg);
+  }
+}
+@keyframes satellite-flight {
+  0% {
+    @include translateY(0px);
+  }
+  25%, 75% {
+    -webkit-transform: translateY(30px) rotateY(-15deg);
+    transform: translateY(30px) rotateY(-15deg);
+  }
+  50% {
+    -webkit-transform: translateY(-22px) rotateY(10deg);
+    transform: translateY(-22px) rotateY(10deg);
+  }
+  90%{
+    -webkit-transform: translateY(15px) rotateY(0deg);
+    transform: translateY(15px) rotateY(0deg);
+  }
+}
+
+/*--------------sky move -----------------*/
+@-webkit-keyframes sky-move {
+  0% {
+    -webkit-transform: translateY(0) scaleX(1);
+    transform: translateY(0) scaleX(1);
+  }
+  25%, 75% {
+    -webkit-transform: translateY(15px) scaleX(0.9);
+    transform: translateY(15px) scaleX(0.9);
+  }
+  50% {
+    -webkit-transform: translateY(-10px) scaleX(1.1);
+    transform: translateY(-15px) scaleX(1.1);
+  }
+}
+@keyframes sky-move {
+  0% {
+    -webkit-transform: translateY(0) scaleX(1);
+    transform: translateY(0) scaleX(1);
+  }
+  25%, 75% {
+    -webkit-transform: translateY(15px) scaleX(0.9);
+    transform: translateY(15px) scaleX(0.9);
+  }
+  50% {
+    -webkit-transform: translateY(-15px) scaleX(1.1);
+    transform: translateY(-15px) scaleX(1.1);
+  }
+}
+
+/*--------------scale -----------------*/
+
+@-webkit-keyframes scale {
+  0% {
+    @include transform-scale(1,1);
+  }
+  50% {
+    @include transform-scale(0.9,0.9);
+  }
+  100%{
+    @include transform-scale(1,1);
+  }
+}
+@keyframes scale {
+  0% {
+    @include transform-scale(1,1);
+  }
+  50% {
+    @include transform-scale(0.9,0.9);
+  }
+  100%{
+    @include transform-scale(1,1);
+  }
+}
+
+ /*-------- future cars----*/
+
+@-webkit-keyframes car-flight {
+  0% {
+    @include translateY(0px);
+  }
+  25%, 75% {
+    -webkit-transform: translateY(25px) rotateX(-25deg);
+    transform: translateY(25px) rotateX(-15deg);
+  }
+  100% {
+    -webkit-transform: translateY(-25px) rotateX(20deg);
+    transform: translateY(-25px) rotateX(20deg);
+  }
+}
+@keyframes car-flight {
+  0% {
+    @include translateY(0px);
+  }
+  25%, 75% {
+    -webkit-transform: translateY(25px) rotateX(-25deg);
+    transform: translateY(25px) rotateX(-15deg);
+  }
+  50% {
+    -webkit-transform: translateY(-25px) rotateX(20deg);
+    transform: translateY(-25px) rotateX(20deg);
+  }
+}
+
+/*-----------------constructor animation-----------*/
+
+@-webkit-keyframes bubble-width {
+  0% {
+    width: 107px;
+  }
+  100% {
+    width: 360px;
+  }
+}
+@keyframes bubble-width {
+  0% {
+   width: 107px;
+  }
+  100% {
+    width: 360px;
+  }
+}
+
+@-webkit-keyframes bubble-width-mob {
+  0% {
+    width: 107px;
+  }
+  100% {
+    width: 300px;
+  }
+}
+@keyframes bubble-width-mob {
+  0% {
+    width: 107px;
+  }
+  100% {
+    width: 300px;
+  }
+}
+
+@-webkit-keyframes typing {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}

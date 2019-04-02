@@ -1,0 +1,57 @@
+h1,.h1{
+  @include font-size(42);
+  font-weight: 900;
+  text-align: center;
+  @include respond(1350){
+    @include font-size(36);
+  }
+  @include respond(1024){
+    @include font-size(26);
+  }
+}
+
+.h1__subheading{
+
+}
+
+h2,.h2{
+
+  @include respond(1350){
+
+  }
+  @include respond(1024){
+
+  }
+}
+
+h3,.h3{
+  @include font-size(24);
+  @include respond(1350){
+
+  }
+  @include respond(1024){
+    @include font-size(20);
+  }
+}
+
+h4,.h4{
+  @include font-size(20);
+  font-weight: 900;
+  @include respond(1024){
+    @include font-size(16);
+  }
+}
+
+h5,.h5{
+}
+
+p{
+  @include font-size(19);
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+
+  @include respond(1024){
+    @include font-size(16);
+  }
+}
